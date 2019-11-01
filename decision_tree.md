@@ -4,11 +4,14 @@
 <table style="font-size:14px;word-wrap:break-word;word-break:break-all;vertical-align:top;"><tr><td colspan=2>
 <!--title-->
 
+
 决策树的生成过程
+
 
 <!--title-->
 </td></tr><tr><td style="width:312px">
 <!--clue-->
+
 
 <h4>概念：</h4>
 基于样本特征做分类
@@ -40,9 +43,11 @@
 <li>不稳定（集成学习）</li>
 <li>...</li>
 
+
 <!--clue-->
 </td><td style="width:800px">
 <!--content-->
+
 
 <a href="https://www.cnblogs.com/muzixi/p/6566803.html" target="_blank">决策树--信息增益，信息增益比，Geni指数的理解</a>
 <br>
@@ -51,6 +56,7 @@
 <a href="https://www.cnblogs.com/pinard/p/6053344.html">决策树算法原理(下)</a>
 <br>
 
+<h3>计算</h3>
 <p>信息熵
 <br>
 每个随机变量的自信息$I(y=c_k)=-log_2 p_k$以各自概率为权的加总：
@@ -96,13 +102,22 @@ $H_A(y)=H_A(D)=-\sum_{j=1}^{m}\frac{|D_j|}{|D|}log_2\frac{|D_j|}{|D|}$
 </p>
 
 <p>基尼系数<br>
+$Gini(y)=\sum_{k=1}^Kp_k(1-p_k)=1-\sum_{k=1}^{K}p_k^2$
+<br>
+经验基尼系数：<br>
+$Gini(y)=Gini(D)=1-\sum_{k=1}^{K}(\frac{|C_k|}{|D|})^2$
+<br>
+当$K=2$时，$Gini(y)=2p(1-p)$，其中，$p$为$p(y=c_1)$，$1-p$为$p(y=c_2)$
 </p>
+
 
 <!--content-->
 </td></tr><tr><td colspan=2 style="font-weight:bold">
 <!--summary-->
 
+
 <li>生成决策树，就是从给定的训练数据集中，依据特征选择的准则，递归的选择最优划分特征，并根据此特征将特征将训练数据进行分割，使得各子数据集有一个最好的分类的过程。</li>
+
 
 <!--summary-->
 </td></tr></table>
