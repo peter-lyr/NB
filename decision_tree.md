@@ -1,8 +1,7 @@
 <!--为了方便笔记的查找，使用不同的标记来标识懂或不懂等等信息-->
 <!--啥：表示新知识，不太懂-->
 <!--哦：表示已经看懂了，而且很重要-->
-<style>* {font-size:14px;word-wrap:break-word;word-break:break-all;vertical-align:top;}</style>
-<table><tr><td colspan=2>
+<table style="font-size:14px;word-wrap:break-word;word-break:break-all;vertical-align:top;"><tr><td colspan=2>
 <!--title-->
 
 决策树的生成过程
