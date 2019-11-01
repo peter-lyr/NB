@@ -7,7 +7,7 @@
 决策树的生成过程
 
 <!--title-->
-</td></tr><tr><td style="width:300px">
+</td></tr><tr><td style="width:312px">
 <!--clue-->
 
 <h4>概念：</h4>
@@ -49,7 +49,54 @@
 <a href="https://www.cnblogs.com/pinard/p/6050306.html">决策树算法原理(上)</a>
 <br>
 <a href="https://www.cnblogs.com/pinard/p/6053344.html">决策树算法原理(下)</a>
+<br>
 
+<p>信息熵
+<br>
+每个随机变量的自信息$I(y=c_k)=-log_2 p_k$以各自概率为权的加总：
+<br>
+$H(y)=\sum_{k=1}^{K}p_kI(y=c_k)=-\sum_{k=1}^{K}p_klog_2 p_k=-\sum_{k=1}^{K}p(y=c_k)log_2p(y=c_k)$。
+<br>
+经验信息熵
+<br>
+$H(y)=H(D)=-\sum_{k=1}^{K}\frac{|C_k|}{|D|}log_2 \frac{|C_k|}{|D|}$。
+</p>
+
+<p>条件熵<br>
+给定特征A时y的信息熵就是条件熵：<br>
+$H(y|A)=\sum_{j=1}^{m}p(A=a_j)H(y|A=a_j)$
+<br>
+特征A将D分为m个部分$a_1,a_2,...,a_m$，
+从中抽取一个样本，属于$a_j$部分的概率为：<br>
+$p(A=a_j)$
+<br>
+对于$a_j$部分，分类仍然有K中情况，故这部分的条件信息熵（计算方式同信息熵）为：<br>
+$H(y|A=a_j)=-\sum_{k=1}^{K}p(y=c_k|A=a_j)log_2p(y=c_k|A=a_j)$
+<br>
+注意，$H(y|A)$和$H(y|A=a_j)$是完全不一样的，前者是后者的加总。<br>
+经验条件熵<br>
+$H(y|A)=H(y|D)=-\sum_{j=1}^{m}\frac{|D_j|}{|D|}\sum_{k=1}^{K}\frac{|D_{jk}|}{|D_j|}log_2\frac{|D_{jk}|}{|D_j|}$
+</p>
+
+<p>信息增益（互信息）<br>
+根据特征A分类的信息增益为：<br>
+$g(y,A)=H(y)-H(y|A)$
+</p>
+
+<p>信息增益比<br>
+$g_R(y,A)=\frac{g(y,A)}{H_A(y)}$
+<br>
+其中$H_A(y)$是y关于A的熵：<br>
+$H_A(y)=-\sum_{j=1}^{m}p(y^A=a_j)log_2p(y^A=a_j)$
+<br>
+注意，$H(y)$是关于y随机变量的信息熵，而$H_A(y)$是关于$A$这特特征所对应的随机变量的信息熵。
+<font color=red>哦</font><br>
+它对应的经验熵为：<br>
+$H_A(y)=H_A(D)=-\sum_{j=1}^{m}\frac{|D_j|}{|D|}log_2\frac{|D_j|}{|D|}$
+</p>
+
+<p>基尼系数<br>
+</p>
 
 <!--content-->
 </td></tr><tr><td colspan=2 style="font-weight:bold">
