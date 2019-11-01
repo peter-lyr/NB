@@ -5,7 +5,7 @@
 <table><tr><td colspan=2>
 <!--title-->
 
-title
+决策树的生成过程
 
 <!--title-->
 </td></tr><tr><td style="width:300px">
@@ -19,7 +19,7 @@ title
 <li>决策树生成</li>
 <li>决策树剪枝</li>
 
-<h4>计算</h4>
+<h4>特征选择的依据(计算)</h4>
 <li>信息增益</li>
 <li>信息增益率</li>
 <li>基尼指数</li>
@@ -35,7 +35,7 @@ title
 </td></tr><tr><td colspan=2 style="font-weight:bold">
 <!--summary-->
 
-summary
+生成决策树，就是从给定的训练数据集中，依据特征选择的准则，递归的选择最优划分特征，并根据此特征将特征将训练数据进行分割，使得各子数据集有一个最好的分类的过程。
 
 <!--summary-->
 </td></tr></table>
