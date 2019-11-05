@@ -5,8 +5,14 @@
 - LR是典型的线性分类器
 - 目的：找到超平面
 
-
 # CONTENT
+  1. [分类算法](#分类算法)
+      1. [分类算法的学习对象](#分类算法的学习对象)
+      2. [学习目标](#学习目标)
+      3. [分类算法的分类](#分类算法的分类)
+  2. [logistic分类](#logistic分类)
+      1. [问题的数学模型](#问题的数学模型)
+      2. [数学模型的求解](#数学模型的求解)
 ### 分类算法
 ##### 分类算法的学习对象
 m个样本（每个样本有n个特征，且对应1个标签。）
@@ -47,6 +53,7 @@ $$\boldsymbol{y}=
 \end{matrix}\right]
 \tag{1.2}$$
 
+
 因为可以线性分为两类，故可以找到一个超平面
 $f(\boldsymbol{x})=\boldsymbol{\theta}^T\boldsymbol{x}=0$
 将样本正确分到两个不同的标签。其中
@@ -59,7 +66,11 @@ $$\boldsymbol{\theta}=
 \end{matrix}\right]
 \tag{1.3}$$
 
+所以我们把问题转化为在$n$维空间中寻找最合适的超平面，这个超平面用$n+1$维向量$\boldsymbol\theta$来表征。
+
+##### 数学模型的求解
 这时，特征$\boldsymbol{x}$到标签$y\in\{0,1\}$之间的映射，从$\boldsymbol{R^n}\to\{0,1\}$简化为$\boldsymbol{R}\to\{0,1\}$，即特征的线性组合$\boldsymbol{\theta}^T\boldsymbol{x}\in\boldsymbol{R}$到标签$y\in\{0,1\}$的映射。
+
 那这个映射该如何表示？用sigmoid函数$g(z)=\frac{1}{1+e^{-z}}$！
 <div align="center"><img src="https://p-blog.csdn.net/images/p_blog_csdn_net/chl033/612813/o_SigmoidFunction_701_2.gif" height="200"><p>图1.1</p></div>
 
@@ -88,10 +99,16 @@ $$\theta_j^{new}=\theta_j^{old}-\alpha\frac{\partial}{\partial\theta_j}J(\boldsy
 其中，$\frac{\partial}{\partial\theta_j}J(\boldsymbol\theta)$的求解：
 <div align="center"><img src="https://img-blog.csdn.net/20131113203723187?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZG9uZ3Rpbmd6aGl6aQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"><p>图1.2</p></div>
 
+
 故有：
-$$\theta_j^{new}=\theta_j^{old}-\alpha\frac{1}{m}\sum_{i=1}^m\left(h_\boldsymbol\theta(\boldsymbol{x}^{(i)})-y^{(i)}\right)\boldsymbol{x}_j^{(i)}$$
+$$\theta_j^{new}=\theta_j^{old}-\alpha\frac{1}{m}\sum_{i=1}^m\left(h_\boldsymbol\theta(\boldsymbol{x}^{(i)})-y^{(i)}\right)\boldsymbol{x}_j^{(i)}\tag{1.11}$$
 向量化：
-$$\boldsymbol\theta^{new}=\boldsymbol\theta^{old}-\alpha\frac{1}{m}\boldsymbol{X}^T\left(g\left(\boldsymbol{X\boldsymbol\theta}^{old}\right)-\boldsymbol{y}\right)$$
+$$\boldsymbol\theta^{new}=\boldsymbol\theta^{old}-\alpha\frac{1}{m}\boldsymbol{X}^T\left(g\left(\boldsymbol{X\boldsymbol\theta}^{old}\right)-\boldsymbol{y}\right)\tag{1.12}$$
+证明过程：
+
+<div align="center"><img src="https://github.com/peter-lyr/NB/blob/master/algorithm/statics/logistic_regresion_%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E8%BF%AD%E4%BB%A3%E5%85%AC%E5%BC%8F%E5%90%91%E9%87%8F%E5%8C%96%E6%8E%A8%E5%AF%BC.jpg?raw=true"><p>图1.3</p></div>
+
+
 
   <!--$$Wx+b=0$$-->
 
