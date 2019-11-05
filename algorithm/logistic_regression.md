@@ -30,26 +30,26 @@ m个样本（每个样本有n个特征，且对应1个标签。）
 样本可以表示为：
 $$\boldsymbol{X}=
 \left[\begin{matrix}
-  x^{(1)}\\\
-  x^{(2)}\\\
-  \vdots\\\
-  x^{(m)}\\\
+  x^{(1)}\\\\
+  x^{(2)}\\\\
+  \vdots\\\\
+  x^{(m)}\\\\
 \end{matrix}\right]=
 \left[\begin{matrix}
-  x_0^{(1)} & x_1^{(1)} & \cdots & x_n^{(1)}\\\
-  x_0^{(2)} & x_1^{(2)} & \cdots & x_n^{(2)}\\\
-  \vdots & \vdots & \ddots & \vdots\\\
-  x_0^{(m)} & x_1^{(m)} & \cdots & x_n^{(m)}\\\
+  x_0^{(1)} & x_1^{(1)} & \cdots & x_n^{(1)}\\\\
+  x_0^{(2)} & x_1^{(2)} & \cdots & x_n^{(2)}\\\\
+  \vdots & \vdots & \ddots & \vdots\\\\
+  x_0^{(m)} & x_1^{(m)} & \cdots & x_n^{(m)}\\\\
 \end{matrix}\right],
 (x_0^{(j)}=1,j=1,2,\cdots,m).
 \tag{1.1}$$
 
 $$\boldsymbol{y}=
 \left[\begin{matrix}
-  y^{(1)}\\\
-  y^{(2)}\\\
-  \vdots\\\
-  y^{(m)}\\\
+  y^{(1)}\\\\
+  y^{(2)}\\\\
+  \vdots\\\\
+  y^{(m)}\\\\
 \end{matrix}\right]
 \tag{1.2}$$
 
@@ -59,10 +59,10 @@ $f(\boldsymbol{x})=\boldsymbol{\theta}^T\boldsymbol{x}=0$
 将样本正确分到两个不同的标签。其中
 $$\boldsymbol{\theta}=
 \left[\begin{matrix}
-  \theta_{0}\\\
-  \theta_{1}\\\
-  \vdots\\\
-  \theta_{n}\\\
+  \theta_{0}\\\\
+  \theta_{1}\\\\
+  \vdots\\\\
+  \theta_{n}\\\\
 \end{matrix}\right]
 \tag{1.3}$$
 
