@@ -106,9 +106,10 @@ $$\theta_j^{new}=\theta_j^{old}-\alpha\frac{\partial}{\partial\theta_j}J(\boldsy
 $$\theta_j^{new}=\theta_j^{old}-\alpha\frac{1}{m}\sum_{i=1}^m\left(h_\boldsymbol\theta(\boldsymbol{x}^{(i)})-y^{(i)}\right)\boldsymbol{x}_j^{(i)}\tag{1.11}$$
 向量化：
 $$\boldsymbol\theta^{new}=\boldsymbol\theta^{old}-\alpha\frac{1}{m}\boldsymbol{X}^T\left(g\left(\boldsymbol{X\boldsymbol\theta}^{old}\right)-\boldsymbol{y}\right)\tag{1.12}$$
-证明过程：
-
-<div align="center"><img src="https://github.com/peter-lyr/NB/blob/master/algorithm/statics/logistic_regresion_%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E8%BF%AD%E4%BB%A3%E5%85%AC%E5%BC%8F%E5%90%91%E9%87%8F%E5%8C%96%E6%8E%A8%E5%AF%BC.jpg?raw=true"><p>图1.3</p></div>
+证明过程：\
+logistic regression算法推到过程
+<button onclick="javascript:var a=document.getElementById('img0');if(a.style.width=='0px'){a.style.width='100%';this.innerText='隐藏';}else{a.style.width='0px';this.innerText='展开';}window.scrollTo(0,this.offsetTop)" style="background:#080;color:#fff;font-weight:bold;border-radius:10px;border:none;cursor:pointer;outline:none;overflow:auto">展开</button>
+<img id="img0" src="https://github.com/peter-lyr/NB/blob/master/algorithm/statics/logistic_regresion_%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E8%BF%AD%E4%BB%A3%E5%85%AC%E5%BC%8F%E5%90%91%E9%87%8F%E5%8C%96%E6%8E%A8%E5%AF%BC.jpg?raw=true" style="width:0px"></img> 
 
 
 
