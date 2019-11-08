@@ -20,4 +20,7 @@
   深入理解拉格朗日乘子法（Lagrange Multiplier) 和KKT条件
   <button onclick="javascript:var height=(window.innerHeight-98)+'px';var a=document.getElementsByTagName('iframe')[4];if(a.style.height=='0px'){a.style.height=height;this.innerText='隐藏';}else{a.style.height='0px';this.innerText='展开';}window.scrollTo(0,this.offsetTop)" style="background:#080;color:#fff;font-weight:bold;border-radius:10px;border:none;cursor:pointer;outline:none;overflow:auto">展开</button><hr>
   <iframe src="https://blog.csdn.net/xianlingmao/article/details/7919597" frameborder="0" width=100% allowfullscreen style="height:0px"></iframe>
+
 ## SUMMARY
+- 支持向量机最难理解的部分是核函数。
+- 核函数部分知识的理解可能需要结合感知机和神经网络相关的知识。
